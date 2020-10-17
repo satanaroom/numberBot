@@ -17,7 +17,7 @@ let numberBot = function() {
     }
 
     let randomNumber = getRandomNumber(1, 100);
-    
+
     let answer = prompt('Угадай число от 1 до 100');
 
     if (answer === null) {
@@ -29,7 +29,7 @@ let numberBot = function() {
       console.log(randomNumber);
       alert('Поздравляю, Вы угадали!!!');
       let answerTwo = confirm('Хотите сыграть еще?');
-      if (answerTwo === 1){
+      if (answerTwo === true){
         return repeat();
       }
     } else if (answer > randomNumber) {
