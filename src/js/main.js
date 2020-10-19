@@ -7,16 +7,16 @@ let numberBot = function() {
   let isNumber = function(n) {
     return !isNaN(parseFloat(n)) && isFinite(n);
   };
+  
   let tryNumber = 10;
+  function getRandomNumber(min, max) {                           // Рандомит число
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min; 
+      }
+      let randomNumber = getRandomNumber(1, 100);
 
   function repeat() {
-
-    function getRandomNumber(min, max) {                           // Рандомит число
-      min = Math.ceil(min);
-      max = Math.floor(max);
-      return Math.floor(Math.random() * (max - min + 1)) + min; 
-    }
-    let randomNumber = getRandomNumber(1, 100);
     
     let question = function(){
       return confirm('Попытки закончились, хотите сыграть еще?');
